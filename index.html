@@ -17,12 +17,34 @@
 
 </head>
 
-<body>  
-    <main>
-        <div>
-            <h1></h1>
+<body>
+    <div id="app">
+        <div class="container">
+            <header>
+                <h1>
+                    {{ title }}
+                </h1>
+            </header>
+
+            <body>
+                <div class="random-email">
+                    <ul>
+                        <li v-if="randomMail.length === 10" v-for="mail in randomMail">
+                            {{ mail }}
+                        </li>
+                    </ul>
+                    <p v-if="randomMail.length <= 9">
+                        Caricamento delle mail in corso... ATTENDERE!!
+                    </p>
+                    
+
+                </div>
+
+            </body>
+
         </div>
-    </main>
+    </div>
+
 
 
     <!--Ajax-->
