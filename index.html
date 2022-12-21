@@ -27,7 +27,7 @@
             </header>
 
             <body>
-                <div class="random-email" v-show="randomMail.length === 10">
+                <div class="random-email" v-if="randomMail.length === 10">
                     <h3>
                         lista di 10 mail:
                     </h3>
@@ -38,7 +38,7 @@
                     </ul>
                 </div>
 
-                <div class="empty-mail" v-show="randomMail.length <= 9">
+                <div class="empty-mail" v-else>
                     <p>
                         Caricamento delle mail in corso... ATTENDERE!!
                     </p>
