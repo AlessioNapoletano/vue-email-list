@@ -21,13 +21,16 @@
     <div id="app">
         <div class="container">
             <header>
-                <h1>
+                <h1 class="text-center">
                     {{ title }}
                 </h1>
             </header>
 
             <body>
                 <div class="random-email">
+                    <h3>
+                        lista di 10 mail:
+                    </h3>
                     <ul>
                         <li v-if="randomMail.length === 10" v-for="mail in randomMail">
                             {{ mail }}
