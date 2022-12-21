@@ -42,15 +42,26 @@ createApp({
 
     methods: {
         getRandomMail: function() {
+            //let result = [];
             for (i = 0; i < 10; i++) {
                 axios.get("https://flynn.boolean.careers/exercises/api/random/mail").then( (response) => {                    
+                    //result.push(response.data.response);
                     this.randomMail.push(response.data.response);
+                     
                 })
             }
+            //return result;
         }
     },
 
     created() {
-        this.getRandomMail();
+        /*
+        -PROVA: CASO DI UTILIZZO CON FUNZIONE CHE RITORNA UN ARRAY DI STRINGHE
+        this.randomMail = this.getRandomMail();
+        console.log(this.randomMail)
+        */
+       this.getRandomMail();
+
+
     }
 }).mount('#app')
