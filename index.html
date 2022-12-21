@@ -27,20 +27,21 @@
             </header>
 
             <body>
-                <div class="random-email">
+                <div class="random-email" v-show="randomMail.length === 10">
                     <h3>
                         lista di 10 mail:
                     </h3>
                     <ul>
-                        <li v-if="randomMail.length === 10" v-for="mail in randomMail">
+                        <li  v-for="mail in randomMail">
                             {{ mail }}
                         </li>
                     </ul>
-                    <p v-if="randomMail.length <= 9">
+                </div>
+
+                <div class="empty-mail" v-show="randomMail.length <= 9">
+                    <p>
                         Caricamento delle mail in corso... ATTENDERE!!
                     </p>
-                    
-
                 </div>
 
             </body>
